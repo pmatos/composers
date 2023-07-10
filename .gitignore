@@ -1,0 +1,12 @@
+# Ignore built files
+dist/
+build/
+
+# Ignore dependencies
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore any files that contain sensitive information
+*.secret

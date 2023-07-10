@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "location": {
+      "lat": 48.2082,
+      "lng": 16.3738
+    },
+    "content": {
+      "text": "Ludwig van Beethoven",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg/440px-Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg",
+      "link": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven"
+    }
+  },
+  {
+    "id": 2,
+    "location": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "content": {
+      "text": "Claude Debussy",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Claude_Debussy_atelier_Nadar.jpg/440px-Claude_Debussy_atelier_Nadar.jpg",
+      "link": "https://en.wikipedia.org/wiki/Claude_Debussy"
+    }
+  }
+]
