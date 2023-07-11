@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import './style.css';
 import L from 'leaflet';
 
 type LocationData = {
@@ -34,10 +35,11 @@ const MapComponent = () => {
       .catch((error) => {
         console.error('Error fetching data.json:', error);
       });
-  });
+  }, []);
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={2} style={{ height: "100vh", width: "100%" }}>
+    <StrictMode>
+    <MapContainer center={[51.505, -0.09]} zoom={2}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -55,9 +57,13 @@ const MapComponent = () => {
         </Marker>
       ))}
     </MapContainer>
+    </StrictMode>
   );
 };
 
 const container = document.getElementById('app');
 const root = createRoot(container!);
-root.render(<MapComponent />);
+root.render(
+  <StrictMode>
+    <MapComponent />
+  </StrictMode>);
